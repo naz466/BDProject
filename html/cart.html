@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Cart</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../other/jquery.flipster.min.css">
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+    <div class="main-container">
+        <span class="glyphicon glyphicon-menu-hamburger more-menu"></span>
+        <div class="left-menu" id="left">
+            <div class="one-item-container catalog">
+                <div class="one-item">
+                    Каталог
+                </div>
+            </div>
+            <div class="one-item-container active cart">
+                <div class="one-item">
+                    Корзина
+                </div>
+            </div>
+        </div>
+
+        <div class="center-menu">
+            <div class="items-container">
+                <div class="item">
+                    <div class="thumbnail item-card">
+                        <img src="../other/iphone.jpeg">
+                        <div class="caption">
+                            <div class="item-name">
+                                Apple Iphone X 64GB White
+                            </div>
+                            <div class="price">
+                                100$
+                            </div>
+                            <span class="btn btn-default btn-delete"><span class="glyphicon glyphicon-remove"></span></span>
+                            <div class="buttons">
+                                <span class="btn btn-danger btn-remove"><span class="glyphicon glyphicon-minus"></span></span>
+                                <span class="label label-info counts">1</span>
+                                <span class="btn btn-success btn-add"><span class="glyphicon glyphicon-plus"></span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="total-container">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../other/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="../other/jquery.flipster.min.js"></script>
+    <script src="../js/cart.js"></script>
+</body>
+</html>

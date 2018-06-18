@@ -1,0 +1,85 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: 'Slabo 27px', serif;
+    background-color: dodgerblue;
+    overflow-x: hidden;
+}
+
+label {
+    color: black;
+    font-size: 16px;
+}
+
+.main-container {
+    width: 100%;
+    position: relative;
+}
+
+.organization {
+    text-align: center;
+    margin-top: -25px;
+    width: 100%;
+    font-size: 50px;
+    color: white;
+}
+
+.form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.sign-up {
+    width: 150px;
+    font-size: 16px;
+}
+
+.for-sign-up {
+    text-align: center;
+}
+
+.glyphicon-chevron-left {
+    color: white;
+    font-size: 26px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.glyphicon-chevron-left:hover, .sign-up:hover {
+    color: #a0000f;
+    cursor: pointer;
+}
+
+.has-error .form-control:focus, .has-error .form-control{
+    border: 2px solid #a0000f;
+    border-radius: 6px;
+}
+
+#helpNewSurname, #helpNewName, #helpNewEmail, #helpNewPassword, #helpNewPassword2, #helpNewPhone {
+    color: #a0000f;
+    font-size: 16px;
+    display: none;
+}
+
+.reg-surname, .reg-name, .reg-email, .reg-password, .reg-password2, .reg-phone {
+    font-size: 16px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #a6a6a6;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}

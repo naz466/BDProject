@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Registration</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../other/jquery.flipster.min.css">
+    <link rel="stylesheet" href="../css/registration.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <span class="glyphicon glyphicon-chevron-left back"></span>
+        <div class="organization">
+            On Shop Storeline
+        </div>
+
+        <div class="form">
+            <div class="form-group reg-form-surname">
+                <label class="surname">Surname</label>
+                <input type="text" class="form-control reg-surname" placeholder="Surname">
+                <span id="helpNewSurname" class="help-block">Please enter surname</span>
+            </div>
+            <div class="form-group reg-form-name">
+                <label class="name">Name</label>
+                <input type="text" class="form-control reg-name" placeholder="Name">
+                <span id="helpNewName" class="help-block">Please enter name</span>
+            </div>
+            <div class="form-group reg-form-email">
+                <label class="email">Email address</label>
+                <input type="email" class="form-control reg-email" placeholder="Email">
+                <span id="helpNewEmail" class="help-block">Enter correct email</span>
+            </div>
+            <div class="form-group reg-form-password">
+                <label class="password">Password</label>
+                <input type="password" class="form-control reg-password" placeholder="Password">
+                <span id="helpNewPassword" class="help-block">Not less than 6 symbols</span>
+            </div>
+            <div class="form-group reg-form-password2">
+                <label class="password2">Confirm Password</label>
+                <input type="password" class="form-control reg-password2" placeholder="Confirm Password">
+                <span id="helpNewPassword2" class="help-block">Passwords do not match</span>
+            </div>
+            <div class="form-group reg-form-phone">
+                <label class="phone-number">Phone number</label>
+                <input type="text" class="form-control reg-phone" placeholder="Phone">
+                <span id="helpNewPhone" class="help-block">Enter correct phone number</span>
+            </div>
+            <div class="for-sign-up">
+                <button type="submit" class="btn btn-default sign-up">Sign up</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../other/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="../other/jquery.flipster.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/registration.js"></script>
+    <script src="../js/LocalStorage.js"></script>
+</body>
+</html>

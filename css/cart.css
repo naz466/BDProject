@@ -103,6 +103,13 @@ img {
     margin-right: 2%;
 }
 
+.item-color, .item-memory, .item-guarantee {
+    width: 60%;
+    font-size: 18px;
+    color: darkgray;
+    float: left;
+}
+
 .price {
     font-size: 32px;
     float: left;
@@ -141,6 +148,31 @@ img {
     margin-right: 5%;
     float: right;
     border-top: 2px solid gray;
+}
+
+.id_goods_item {
+    color: darkgray;
+    float: right;
+}
+
+.sum {
+    float: right;
+    font-size: 28px;
+    color: dodgerblue;
+}
+
+.for-order {
+    float: right;
+    margin-left: 2%;
+}
+
+.btn-order {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.btn-order:hover {
+    color: #a0000f;
 }
 
 ::-webkit-scrollbar {

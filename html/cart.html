@@ -25,32 +25,27 @@
                     Корзина
                 </div>
             </div>
+            <div class="one-item-container cabinet">
+                <div class="one-item">
+                    Кабінет
+                </div>
+            </div>
+            <div class="one-item-container log-out">
+                <div class="one-item">
+                    <span class="glyphicon glyphicon-off"></span>
+                </div>
+            </div>
         </div>
 
         <div class="center-menu">
-            <div class="items-container">
-                <div class="item">
-                    <div class="thumbnail item-card">
-                        <img src="../other/iphone.jpeg">
-                        <div class="caption">
-                            <div class="item-name">
-                                Apple Iphone X 64GB White
-                            </div>
-                            <div class="price">
-                                100$
-                            </div>
-                            <span class="btn btn-default btn-delete"><span class="glyphicon glyphicon-remove"></span></span>
-                            <div class="buttons">
-                                <span class="btn btn-danger btn-remove"><span class="glyphicon glyphicon-minus"></span></span>
-                                <span class="label label-info counts">1</span>
-                                <span class="btn btn-success btn-add"><span class="glyphicon glyphicon-plus"></span></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="items-container" id="items">
+
             </div>
             <div class="total-container">
-
+                <div class="for-order">
+                    <span class="btn btn-default btn-order">Замовити</span>
+                </div>
+                <div class="sum" id="sum"></div>
             </div>
         </div>
     </div>
@@ -59,5 +54,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="../other/jquery.flipster.min.js"></script>
     <script src="../js/cart.js"></script>
+    <script src="../js/LocalStorage.js"></script>
+    <script src="../js/database.js"></script>
 </body>
 </html>

@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Confirmation</title>
+    <title>On Shop Storeline</title>
 
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="../other/jquery.flipster.min.css">
-    <link rel="stylesheet" href="../css/confirmation.css">
+    <link rel="stylesheet" href="../css/administrator.css">
 </head>
 <body>
 
@@ -20,14 +20,19 @@
         </div>
 
         <div class="form">
-            <div class="form-group form-confirmation">
-                <label class="confirmation">Key</label>
-                <input type="text" class="form-control reg-confirmation" placeholder="Confirmation key">
-                <span id="helpConfirmation" class="help-block">Enter correct key</span>
+            <div class="form-group log-form-id">
+                <label class="id">ID</label>
+                <input type="email" class="form-control log-id" placeholder="ID">
+                <span id="helpId" class="help-block">Incorrect ID</span>
             </div>
-        </div>
-        <div class="for-confirmation">
-            <button type="submit" class="btn btn-default confirm">Confirm</button>
+            <div class="form-group log-form-pass">
+                <label class="pass">Password</label>
+                <input type="password" class="form-control log-pass" placeholder="Password">
+                <span id="helpPass" class="help-block">Incorrect password</span>
+            </div>
+            <div class="for-log">
+                <button type="button" class="btn btn-default log">Sign in</button>
+            </div>
         </div>
     </div>
 
@@ -35,7 +40,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="../other/jquery.flipster.min.js"></script>
     <script src="../js/main.js"></script>
-    <script src="../js/confirmation.js"></script>
+    <script src="../js/administrator.js"></script>
     <script src="../js/LocalStorage.js"></script>
     <script src="../js/database.js"></script>
 </body>

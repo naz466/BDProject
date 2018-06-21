@@ -32,13 +32,12 @@ label {
     margin: 0 auto;
 }
 
-.sign-in, .forgot {
+.log {
     width: 150px;
     font-size: 16px;
-    margin: 10px;
 }
 
-.for-sign-in, .for-forgot-password {
+.for-log {
     text-align: center;
 }
 
@@ -49,7 +48,7 @@ label {
     cursor: pointer;
 }
 
-.glyphicon-chevron-left:hover, .sign-in:hover, .forgot:hover {
+.glyphicon-chevron-left:hover, .sign-in:hover {
     color: #a0000f;
     cursor: pointer;
 }
@@ -59,14 +58,14 @@ label {
     border-radius: 6px;
 }
 
-#helpEmail, #helpPassword {
+#helpId, #helpPass {
     color: #a0000f;
     font-size: 16px;
     display: none;
 }
 
-.log-email, .log-password {
-    font-siyeze: 16px;
+.log-id, .log-pass {
+    font-size: 16px;
 }
 
 ::-webkit-scrollbar {

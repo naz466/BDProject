@@ -1,0 +1,27 @@
+<div class="item">
+    <div class="thumbnail item-card">
+        <span class="id_goods_item"><%= item.id_goods%></span>
+        <img src="<%= item.img%>">
+        <div class="caption">
+            <div class="item-name">
+                <%= item.model%>
+            </div>
+            <div class="item-color">
+                <%= item.color%>
+            </div>
+            <div class="item-memory">
+                <%= item.memory%>gb
+            </div>
+            <p class="topping"><%= item.characteristics%></p>
+            <div class="item-guarantee">
+                <%= item.guarantee%>
+            </div>
+            <div class="price-container">
+                <div class="price">
+                    <%= item.price%> $
+                </div>
+                <span class="btn btn-default btn-buy">Купити</span>
+            </div>
+        </div>
+    </div>
+</div>

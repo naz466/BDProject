@@ -2,7 +2,7 @@
   "name": "nw-app",
   "version": "1.0.0",
   "description": "",
-  "main": "./html/catalog.html",
+  "main": "./html/main.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

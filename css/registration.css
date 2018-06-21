@@ -58,7 +58,7 @@ label {
     border-radius: 6px;
 }
 
-#helpNewSurname, #helpNewName, #helpNewEmail, #helpNewPassword, #helpNewPassword2, #helpNewPhone {
+#helpNewSurname, #helpNewName, #helpNewEmail, #helpNewEmail2, #helpNewPassword, #helpNewPassword2, #helpNewPhone {
     color: #a0000f;
     font-size: 16px;
     display: none;

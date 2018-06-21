@@ -1,10 +1,11 @@
+var mailer = require('nodemailer');
+var crypt = require('crypto');
 var surname;
 var name;
 var email;
 var password;
 var password2;
 var phone;
-var mailer = require('nodemailer');
 
 function signUp() {
     surname = $('.reg-surname').val();
@@ -15,8 +16,29 @@ function signUp() {
     phone = $('.reg-phone').val();
 
     if (validationSignUp(surname, name, email, password, password2, phone)) {
-        var key = generateKey();
-        confirmEmail(email, key);
+        checkEmail(email, function (err, res) {
+            if (!err) {
+                if (!res) {
+                    var key = generateKey();
+                    password = sha1(password);
+                    surname = capitalize(surname);
+                    name = capitalize(name);
+                    email = email.toLowerCase();
+                    setInfo(surname, name, email, password, phone);
+                    confirmEmail(email, key, function (err, res) {
+                        if (!err && res) {
+                            set('key', key);
+                            $('.reg-form-email.form-group').removeClass('has-error');
+                            $('#helpNewEmail2').css('display', 'none');
+                            document.location.href = '../html/confirmation.html';
+                        }
+                    });
+                } else {
+                    $('.reg-form-email.form-group').addClass('has-error');
+                    $('#helpNewEmail2').css('display', 'block');
+                }
+            }
+        });
     }
 }
 
@@ -45,11 +67,13 @@ function validationSignUp(surname, name, email, password, password2, phone) {
     } else {
         if (!validEmail(email)) {
             $('.reg-form-email.form-group').addClass('has-error');
+            $('#helpNewEmail2').css('display', 'none');
             $('#helpNewEmail').css('display', 'block');
             valid = false;
         } else {
             $('.reg-form-email.form-group').removeClass('has-error');
             $('#helpNewEmail').css('display', 'none');
+            $('#helpNewEmail2').css('display', 'none');
         }
     }
     if (password.length < 6) {
@@ -99,8 +123,7 @@ function confirmPassword(password, password2) {
     return password === password2;
 }
 
-function confirmEmail(email, key) {
-    var success = false;
+function confirmEmail(email, key, callback) {
     var smtpTransport = mailer.createTransport({
         service: "Gmail",
         auth: {
@@ -117,12 +140,11 @@ function confirmEmail(email, key) {
         html: "<b style='color: black'>Hello. Please confirm your email with this key: </b> <h2>" + key + "</h2>"
     };
 
-    smtpTransport.sendMail(mail, function (error, response) {
-        if (error) {
-            console.log(error);
+    smtpTransport.sendMail(mail, function (err, response) {
+        if (err) {
+            callback(err, null);
         } else {
-            set('key', key);
-            document.location.href = '../html/confirmation.html';
+            callback(null, true);
         }
         smtpTransport.close();
     });
@@ -135,4 +157,22 @@ function generateKey() {
         key += possible.charAt(Math.floor(Math.random() * possible.length));
     }
     return key;
+}
+
+function setInfo(surname, name, email, password, phone) {
+    set('surname', surname);
+    set('name', name);
+    set('email', email);
+    set('password', password);
+    set('phone', phone);
+}
+
+function sha1(string) {
+    var sha1 = crypt.createHash('sha1');
+    sha1.update(string);
+    return sha1.digest('base64');
+}
+
+function capitalize(string) {
+    return string[0].toUpperCase() + string.slice(1);
 }

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Adding</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../other/jquery.flipster.min.css">
+    <link rel="stylesheet" href="../css/adding.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <span class="glyphicon glyphicon-menu-hamburger more-menu"></span>
+
+        <div class="left-menu" id="left">
+            <div class="one-item-container catalog">
+                <div class="one-item">
+                    Каталог
+                </div>
+            </div>
+            <div class="one-item-container orders">
+                <div class="one-item">
+                    Замовлення
+                </div>
+            </div>
+            <div class="one-item-container active adding">
+                <div class="one-item">
+                    Додавання
+                </div>
+            </div>
+            <div class="one-item-container log-out">
+                <div class="one-item">
+                    <span class="glyphicon glyphicon-off"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="center-menu">
+            <div class="container">
+                <div class="adding-container">
+                    <div class="form">
+                        <div class="form-group for-id-goods">
+                            <label class="code">Code</label>
+                            <input type="number" min="100" class="form-control id-goods" placeholder="01358">
+                            <span id="helpIdGoods" class="help-block">Please enter code</span>
+                            <span id="helpIdGoods2" class="help-block">A product with such code already exists</span>
+                        </div>
+                        <div class="form-group for-model">
+                            <label class="name">Model</label>
+                            <input type="text" class="form-control model" placeholder="Model">
+                            <span id="helpName" class="help-block">Please enter model</span>
+                        </div>
+                        <div class="form-group for-price">
+                            <label class="price-item">Price</label>
+                            <input type="number" min="1" class="form-control price" placeholder="100">
+                            <span id="helpPrice" class="help-block">Please enter price</span>
+                        </div>
+                        <div class="form-group for-memory">
+                            <label class="memory-item">Memory</label>
+                            <select class="form-control memory">
+                                <option>16</option>
+                                <option>32</option>
+                                <option>64</option>
+                                <option>128</option>
+                                <option>256</option>
+                            </select>
+                        </div>
+                        <div class="form-group for-color">
+                            <label class="color-item">Color</label>
+                            <select class="form-control color">
+                                <option>white</option>
+                                <option>black</option>
+                                <option>silver</option>
+                                <option>gold</option>
+                                <option>red</option>
+                            </select>
+                        </div>
+                        <div class="form-group for-guarantee">
+                            <label class="guarantee-item">Guarantee</label>
+                            <select class="form-control guarantee">
+                                <option>1 month</option>
+                                <option>3 month</option>
+                                <option>6 month</option>
+                                <option>12 month</option>
+                            </select>
+                        </div>
+                        <div class="form-group for-characteristics">
+                            <label class="characteristics-item">Characteristics</label>
+                            <textarea class="form-control characteristics" rows="5"></textarea>
+                            <span id="helpCharacteristics" class="help-block">Please enter characteristics</span>
+                        </div>
+                        <div class="form-group for-image">
+                            <label class="image-item">Image</label>
+                            <input id="img" type="file" name="photo" class="image" accept=".png, .jpg, jpeg" multiple />
+                            <span id="helpImage" class="help-block">Please choose image</span>
+                        </div>
+                        <div class="for-add">
+                            <button type="submit" class="btn btn-default add">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../other/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="../other/jquery.flipster.min.js"></script>
+    <script src="../js/adding.js"></script>
+    <script src="../js/LocalStorage.js"></script>
+    <script src="../js/database.js"></script>
+</body>
+</html>

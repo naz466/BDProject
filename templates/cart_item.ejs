@@ -1,0 +1,26 @@
+<div class="item">
+    <div class="thumbnail item-card">
+        <span class="id_goods_item"><%= item.id_goods%></span>
+        <img src="<%= item.img%>">
+        <div class="caption">
+            <div class="item-name">
+                <%= item.model%>
+            </div>
+            <div class="price">
+                <%= item.price%>
+            </div>
+            <div class="item-color">
+                <%= item.color%>
+            </div>
+            <div class="item-memory">
+                <%= item.memory%>
+            </div>
+            <span class="btn btn-default btn-delete"><span class="glyphicon glyphicon-remove"></span></span>
+            <div class="buttons">
+                <span class="btn btn-danger btn-remove"><span class="glyphicon glyphicon-minus"></span></span>
+                <span class="label label-info counts"><%= item.quantity%></span>
+                <span class="btn btn-success btn-add"><span class="glyphicon glyphicon-plus"></span></span>
+            </div>
+        </div>
+    </div>
+</div>

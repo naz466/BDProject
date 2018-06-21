@@ -3,11 +3,15 @@ $('.authorization').click(function () {
 });
 
 $('.registration').click(function () {
-    document.location.href = '../html/registration.html'
+    document.location.href = '../html/registration.html';
+});
+
+$('.administrator').click(function () {
+    document.location.href = '../html/administrator.html';
 });
 
 $('.back').click(function () {
-    document.location.href = '../html/main.html'
+    document.location.href = '../html/main.html';
 });
 
 $('.sign-up').click(function () {
@@ -16,6 +20,10 @@ $('.sign-up').click(function () {
 
 $('.sign-in').click(function () {
     signIn();
+});
+
+$('.log').click(function () {
+    log();
 });
 
 $('.confirm').click(function () {

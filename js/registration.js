@@ -7,6 +7,27 @@ var password;
 var password2;
 var phone;
 
+$(function () {
+    $('.reg-surname').keydown(function (e) {
+        if (e.keyCode === 13) signUp();
+    });
+    $('.reg-name').keydown(function (e) {
+        if (e.keyCode === 13) signUp();
+    });
+    $('.reg-email').keydown(function (e) {
+        if (e.keyCode === 13) signUp();
+    });
+    $('.reg-password').keydown(function (e) {
+        if (e.keyCode === 13) signUp();
+    });
+    $('.reg-password2').keydown(function (e) {
+        if (e.keyCode === 13) signUp();
+    });
+    $('.reg-phone').keydown(function (e) {
+        if (e.keyCode === 13) signUp();
+    });
+});
+
 function signUp() {
     surname = $('.reg-surname').val();
     name = $('.reg-name').val();
@@ -23,7 +44,6 @@ function signUp() {
                     password = sha1(password);
                     surname = capitalize(surname);
                     name = capitalize(name);
-                    email = email.toLowerCase();
                     setInfo(surname, name, email, password, phone);
                     confirmEmail(email, key, function (err, res) {
                         if (!err && res) {
@@ -134,7 +154,7 @@ function confirmEmail(email, key, callback) {
 
     var mail = {
         from: "On Shop Storeline <on.shop.storeline@gmail.com>",
-        to: "nazargichva@gmail.com",
+        to: email,
         subject: "Confirm email",
         text: "Hello. Please confirm your email with this key: " + key,
         html: "<b style='color: black'>Hello. Please confirm your email with this key: </b> <h2>" + key + "</h2>"

@@ -28,11 +28,15 @@ $('.catalog').click(function () {
 });
 
 $('.orders').click(function () {
-
+    document.location.href = '../html/orders_admin.html'
 });
 
 $('.adding').click(function () {
     document.location.href = '../html/adding.html'
+});
+
+$('.statistics_admin').click(function () {
+    document.location.href = '../html/statisticsAdmin.html'
 });
 
 $('.log-out').click(function () {
@@ -47,6 +51,7 @@ $('.add').click(function () {
     var memory = $('.memory').val();
     var color = $('.color').val();
     var guarantee = $('.guarantee').val();
+    var quantity = $('.quantity').val();
 
     if (validationInfo(id_goods, model, price, characteristics, img)) {
         checkGoodsId(id_goods, function (err, res) {
@@ -59,7 +64,8 @@ $('.add').click(function () {
                    memory: memory,
                    color: color,
                    img: img,
-                   guarantee: guarantee
+                   guarantee: guarantee,
+                   quantity: quantity
                };
                addToGoods(data, function (err, res) {
                    $('.for-id-goods.form-group').removeClass('has-error');

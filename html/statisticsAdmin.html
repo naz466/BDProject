@@ -4,30 +4,37 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Cart</title>
+    <title>Orders</title>
 
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="../other/jquery.flipster.min.css">
-    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/statistics_admin.css">
 </head>
 <body>
+
     <div class="main-container">
         <span class="glyphicon glyphicon-menu-hamburger more-menu"></span>
+
         <div class="left-menu" id="left">
             <div class="one-item-container catalog">
                 <div class="one-item">
                     Каталог
                 </div>
             </div>
-            <div class="one-item-container active cart">
+            <div class="one-item-container orders">
                 <div class="one-item">
-                    Корзина(<span class="quantity"></span>)
+                    Замовлення
                 </div>
             </div>
-            <div class="one-item-container cabinet">
+            <div class="one-item-container adding">
                 <div class="one-item">
-                    Кабінет
+                    Додавання
+                </div>
+            </div>
+            <div class="one-item-container active statistics_admin">
+                <div class="one-item">
+                    Статистика
                 </div>
             </div>
             <div class="one-item-container log-out">
@@ -39,13 +46,6 @@
 
         <div class="center-menu">
             <div class="items-container" id="items">
-
-            </div>
-            <div class="total-container">
-                <div class="for-order">
-                    <span class="btn btn-default btn-order">Замовити</span>
-                </div>
-                <div class="sum" id="sum"></div>
             </div>
         </div>
     </div>
@@ -53,7 +53,7 @@
     <script src="../other/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="../other/jquery.flipster.min.js"></script>
-    <script src="../js/cart.js"></script>
+    <script src="../js/statistics_admin.js"></script>
     <script src="../js/LocalStorage.js"></script>
     <script src="../js/database.js"></script>
 </body>

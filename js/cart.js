@@ -1,11 +1,13 @@
 var fs = require('fs');
 var ejs = require('ejs');
 var $items = $('#items');
-
 var Cart_one_item = ejs.compile(fs.readFileSync('./templates/cart_item.ejs', "utf8"));
 
 $(function () {
     updateCart();
+    $('.btn-order').click(function () {
+        document.location.href = '../html/order.html';
+    });
 });
 
 $('.more-menu').click(function () {
@@ -15,13 +17,11 @@ $('.more-menu').click(function () {
             $('.left-menu').hide();
         });
         $('.item').animate({width: "89%"}, 500);
-        $('.total-container').animate({width: "89%"}, 500);
         $('.more-menu').animate({left: "0"}, 500);
     } else {
         $('.left-menu').show();
         $('.left-menu').animate({width: "15%"}, 500);
         $('.item').animate({width: "75%"}, 500);
-        $('.total-container').animate({width: "75%"}, 500);
         $('.more-menu').animate({left: "15%"}, 500);
     }
 });
@@ -38,18 +38,9 @@ $('.log-out').click(function () {
     document.location.href = '../html/main.html'
 });
 
-function genSum() {
-    var Cart = getCart();
-    var sum = 0;
-    for (var i = 0; i < Cart.length; i++) {
-        var a = Cart[i].quantity * Cart[i].price;
-        sum += a;
-    }
-    return sum;
-}
-
 function getCart() {
-    var a = get('cart');
+    var cart_name = 'cart' + get('id');
+    var a = get(cart_name);
     if (a !== undefined && a !== null) {
         return a;
     } else {
@@ -58,39 +49,38 @@ function getCart() {
     }
 }
 
+function setCart(Cart) {
+    var cart_name = 'cart' + get('id');
+    set(cart_name, Cart);
+}
+
 function removeFromCart(item) {
-    var a = get('cart');
-    if (a !== undefined) {
-        for (var i = 0; i < a.length; i++) {
-            if (a[i].id_goods === item.id_goods) {
-                var x = a.indexOf(a[i]);
-                a.splice(x, 1);
-                set('cart', a);
-            }
+    var Cart = getCart();
+    for (var i = 0; i < Cart.length; i++) {
+        if (Cart[i].id_goods === item.id_goods) {
+            var x = Cart.indexOf(Cart[i]);
+            Cart.splice(x, 1);
+            setCart(Cart);
         }
     }
 }
 
 function lowCart(item) {
-    var a = get('cart');
-    if (a !== undefined) {
-        for (var i = 0; i < a.length; i++) {
-            if (a[i].id_goods === item.id_goods) {
-                a[i].quantity = a[i].quantity - 1;
-                set('cart', a);
-            }
+    var Cart = getCart();
+    for (var i = 0; i < Cart.length; i++) {
+        if (Cart[i].id_goods === item.id_goods) {
+            Cart[i].quantity = Cart[i].quantity - 1;
+            setCart(Cart);
         }
     }
 }
 
 function upCart(item) {
-    var a = get('cart');
-    if (a !== undefined) {
-        for (var i = 0; i < a.length; i++) {
-            if (a[i].id_goods === item.id_goods) {
-                a[i].quantity = a[i].quantity + 1;
-                set('cart', a);
-            }
+    var Cart = getCart();
+    for (var i = 0; i < Cart.length; i++) {
+        if (Cart[i].id_goods === item.id_goods) {
+            Cart[i].quantity = Cart[i].quantity + 1;
+            setCart(Cart);
         }
     }
 }
@@ -123,8 +113,33 @@ function updateCart() {
         $items.append($node);
     }
 
-    var sum = genSum();
-    $('#sum').html(sum);
+    showSum();
+    showQuantity();
     var Cart = getCart();
     Cart.forEach(showOneItem);
+}
+
+function showSum() {
+    var Cart = getCart();
+    var sum = 0;
+    for (var i = 0; i < Cart.length; i++) {
+        sum += Cart[i].quantity * Cart[i].price;
+    }
+    if (sum === 0) {
+        $('.btn-order').css('pointer-events', 'none');
+        $('.for-order').css('cursor', 'not-allowed');
+    } else {
+        $('.btn-order').css('pointer-events', 'all');
+        $('.for-order').css('cursor', 'auto');
+    }
+    $('#sum').html(sum + '$');
+}
+
+function showQuantity() {
+    var Cart = getCart();
+    var quantity = 0;
+    for (var i = 0; i < Cart.length; i++) {
+        quantity += Cart[i].quantity;
+    }
+    $('.quantity').html(quantity);
 }

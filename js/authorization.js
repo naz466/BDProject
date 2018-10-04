@@ -2,12 +2,18 @@ var crypt = require('crypto');
 var email;
 var password;
 
+$(function () {
+    $('.log-email').keydown(function (e) {
+        if (e.keyCode === 13) signIn();
+    });
+    $('.log-password').keydown(function (e) {
+      if (e.keyCode === 13) signIn();
+    });
+});
+
 function signIn() {
     email = $('.log-email').val();
     password = $('.log-password').val();
-
-    email = email.toLowerCase();
-
     if (validationSignIn(email, password)) {
         password = sha1(password);
         login(email, function (err, res) {

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Orders</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../other/jquery.flipster.min.css">
+    <link rel="stylesheet" href="../css/orders_admin.css">
+</head>
+<body>
+
+<div class="main-container">
+    <span class="glyphicon glyphicon-menu-hamburger more-menu"></span>
+
+    <div class="left-menu" id="left">
+        <div class="one-item-container catalog">
+            <div class="one-item">
+                Каталог
+            </div>
+        </div>
+        <div class="one-item-container active orders">
+            <div class="one-item">
+                Замовлення
+            </div>
+        </div>
+        <div class="one-item-container adding">
+            <div class="one-item">
+                Додавання
+            </div>
+        </div>
+        <div class="one-item-container statistics_admin">
+            <div class="one-item">
+                Статистика
+            </div>
+        </div>
+        <div class="one-item-container log-out">
+            <div class="one-item">
+                <span class="glyphicon glyphicon-off"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="center-menu">
+        <div class="items-container" id="items">
+        </div>
+    </div>
+
+    <div class="right-menu">
+        <div class="filter-price-container">
+            <!--<div class="from-container">-->
+                <!--<label class="from">Від</label>-->
+                <!--<input type="number" class="for-from" min="0" placeholder="0">-->
+            <!--</div>-->
+            <!--<div class="to-container">-->
+                <!--<label class="to">До</label>-->
+                <!--<input type="number" class="for-to" min="0" placeholder="1000">-->
+            <!--</div>-->
+        </div>
+        <div class="filter-status">
+            <div class="one-checkbox">
+                <input type="checkbox" name="16" id="16"> 16gb
+            </div>
+            <div class="one-checkbox">
+                <input type="checkbox" name="32" id="32"> 32gb
+            </div>
+            <div class="one-checkbox">
+                <input type="checkbox" name="64" id="64"> 64gb
+            </div>
+            <div class="one-checkbox">
+                <input type="checkbox" name="128" id="1e"> 128gb
+            </div>
+            <div class="one-checkbox">
+                <input type="checkbox" name="256" id="2s"> 256gb
+            </div>
+        </div>
+        <div class="filter-color-container">
+            <div class="one-checkbox">
+                <input type="checkbox" name="white" id="white"> white
+            </div>
+            <div class="one-checkbox">
+                <input type="checkbox" name="black" id="black"> black
+            </div>
+            <div class="one-checkbox">
+                <input type="checkbox" name="silver" id="silver"> silver
+            </div>
+            <div class="one-checkbox">
+                <input type="checkbox" name="gold" id="gold"> gold
+            </div>
+            <div class="one-checkbox">
+                <input type="checkbox" name="red" id="red"> red
+            </div>
+        </div>
+        <div class="filter-button-container">
+            <button type="button" class="btn btn-default btn-filter">Accept</button>
+        </div>
+    </div>
+</div>
+
+<script src="../other/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="../other/jquery.flipster.min.js"></script>
+<script src="../js/orders_admins.js"></script>
+<script src="../js/LocalStorage.js"></script>
+<script src="../js/database.js"></script>
+
+</body>
+</html>

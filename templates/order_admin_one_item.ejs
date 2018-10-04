@@ -1,0 +1,27 @@
+<div class="one-item-check">
+        <span class="id_orders_item"><%= order.id_order%></span>
+    <span class="time-placed"><%= order.time_placed%></span>
+    <div class="caption">
+        <div class="items-in-check">
+
+        </div>
+        <div class="sum">
+            <%= order.sum_order%>
+        </div>
+        <div class="for-status">
+            <label class="status-label">Status:<label class="label label-success current-status"><%= order.status%></label></label>
+            <% if(order.status !== 'delivered') { %>
+            <select class="form-control status">
+                <option>in process</option>
+                <option>shipped</option>
+                <option>delivered</option>
+            </select>
+            <%}%>
+        </div>
+        <% if(order.status !== 'delivered') {%>
+        <div class="for-change-status">
+            <span class="btn btn-info change-status">Change</span>
+        </div>
+        <%}%>
+    </div>
+</div>

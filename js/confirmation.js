@@ -1,5 +1,11 @@
 var confirmation_key;
 
+$(function () {
+    $('.reg-confirmation').keydown(function (e) {
+        if (e.keyCode === 13) confirmation()    ;
+    });
+})
+
 function confirmation() {
     var key = get('key');
     confirmation_key = $('.reg-confirmation').val();

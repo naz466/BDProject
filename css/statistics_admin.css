@@ -10,8 +10,12 @@ body{
 }
 
 img {
-    width: 120px;
-    float: left;
+    width: 225px;
+}
+
+label {
+    color: black;
+    font-size: 16px;
 }
 
 .main-container {
@@ -69,6 +73,11 @@ img {
     font-size: 18px;
 }
 
+.orders>.one-item, .adding>.one-item {
+    font-size: 15px;
+    margin-top: 2%;
+}
+
 .center-menu {
     width: 100%;
     height: 100vh;
@@ -79,108 +88,13 @@ img {
 }
 
 .items-container {
-    width: 100%;
-    overflow: hidden;
-    background-color: #fbffaa;
-}
-
-.item-card {
-    float: left;
-    width: 100%;
-}
-
-.item {
     width: 75%;
     float: right;
-    margin-right: 5%;
-    margin-top: 2%;
-}
-
-.item-name {
-    font-size: 26px;
-    color: #a0000f;
-    float: left;
     margin-right: 2%;
-}
-
-.item-color, .item-memory, .item-guarantee {
-    width: 60%;
-    font-size: 18px;
-    color: darkgray;
-    float: left;
-}
-
-.price {
-    font-size: 32px;
-    float: left;
-    margin: -6px;
-}
-
-.btn-delete {
-    font-size: 16px;
-    float: right;
-    margin: -5px;
-}
-
-.btn-delete:hover {
-    color: #a0000f;
-}
-
-.buttons {
-    width: 60%;
-    font-size: 16px;
-    float: left;
-    padding: 2%;
-}
-
-.btn-add, .btn-remove, .counts {
-    width: 39px;
-    height: 30px;
-    font-size: 14px;
-}
-
-.counts {
-    font-size: 16px;
-}
-
-.total-container {
-    width: 100%;
-    float: right;
-    background-color: #fbffaa;
-}
-
-.item:last-child {
-    border-bottom: 2px solid gray;
-}
-
-.id_goods_item {
-    color: darkgray;
-    float: right;
-}
-
-.sum {
-    float: right;
-    font-size: 28px;
-    color: dodgerblue;
-}
-
-.for-order {
-    float: right;
-    margin-left: 2%;
-    margin-right: 5%;
-}
-
-.for-order, .sum {
-    margin-top: 1%;
-}
-
-.btn-order {
-    background-color: dodgerblue;
-    color: white;
-}
-
-.btn-order:hover {
-    color: #a0000f;
+    margin-top: 2%;
+    background-color: #fafafa;
+    border: 1px solid gray;
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar {
